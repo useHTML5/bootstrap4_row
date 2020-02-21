@@ -1,0 +1,10 @@
+{% load cms_tags %}
+<div class="{{ instance.container_classes }}">
+    <div class="{{ instance.row_classes }}">
+        {% with instance.column_classes as column_classes %}
+            {% for plugin in instance.child_plugin_instances %}
+                {% render_plugin plugin %}
+            {% endfor %}
+        {% endwith %}
+    </div>
+</div>
