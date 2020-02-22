@@ -7,4 +7,4 @@ class NewRowForm(forms.ModelForm):
 
     class Meta:
         model = models.Bootstrap4Row
-        fields = '__all__'
+        fields = 'create_columns', 'column_classes', 'row_classes', 'container_classes',

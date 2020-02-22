@@ -19,7 +19,7 @@ class Bootstrap4RowPlugin(CMSPluginBase):
         super().save_model(request, obj, form, change)
         data = form.cleaned_data
         for x in range(int(data['create_columns']) if data['create_columns'] is not None else 0):
-            col = Bootstrap4ColumnPlugin(
+            col = models.Bootstrap4Column(
                 parent=obj,
                 placeholder=obj.placeholder,
                 language=obj.language,
